@@ -28,6 +28,11 @@ class CalculatorViewController: UIViewController {
         
         switch accessibilityLabel {
         case "cmplus":
+            if (txtCentimeters.text == ""){
+               txtCentimeters.text = "1"
+                return
+            }
+            
             if let aux = Double(txtCentimeters.text!) {
                let total = aux + 1
                 txtCentimeters.text = String(total)
