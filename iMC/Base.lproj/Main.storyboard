@@ -102,11 +102,18 @@
                                 <rect key="frame" x="202" y="396" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="-_btn"/>
+                                <connections>
+                                    <action selector="decreaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="jUR-yx-YQB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2O-qE-U2r">
                                 <rect key="frame" x="343" y="396" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="cmplus"/>
                                 <state key="normal" image="+_bnt"/>
+                                <connections>
+                                    <action selector="increaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="4sF-go-bJQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfd-7V-Yo9">
                                 <rect key="frame" x="91" y="496" width="20" height="17"/>
@@ -248,6 +255,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qzb-6b-fCU"/>
                     </view>
+                    <connections>
+                        <outlet property="txtCentimeters" destination="x6z-Oz-rDO" id="8EN-Zz-LkB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxt-Bl-wzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

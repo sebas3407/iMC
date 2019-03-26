@@ -10,6 +10,8 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    @IBOutlet weak var txtCentimeters: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +22,26 @@ class CalculatorViewController: UIViewController {
         return .lightContent
     }
 
+    @IBAction func increaseValue(_ sender: Any) {
+        let btn : UIButton = sender as! UIButton
+        let accessibilityLabel = (btn.accessibilityLabel!)
+        
+        switch accessibilityLabel {
+        case "cmplus":
+            if let aux = Double(txtCentimeters.text!) {
+               let total = aux + 1
+                txtCentimeters.text = String(total)
+            }
+           //
+        default:
+            if let aux = Double(txtCentimeters.text!) {
+                let total = aux + 1
+                txtCentimeters.text = String(total)
+            }        }
+    }
+    
+    @IBAction func decreaseValue(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
