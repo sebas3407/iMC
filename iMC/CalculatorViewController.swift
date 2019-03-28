@@ -11,8 +11,8 @@ import UIKit
 class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var txtCentimeters: UITextField!
-    //   @IBOutlet weak var txtCentimeters: UITextField!
-    //    @IBOutlet weak var txtCentimeters: UITextField!
+    @IBOutlet weak var txtKilograms: UITextField!
+    @IBOutlet weak var txtGoal: UITextField!
     @IBOutlet weak var txtAge: UITextField!
     
     enum Gender {
@@ -26,6 +26,7 @@ class CalculatorViewController: UIViewController {
     var result : Double = 0
     var ibm : String = ""
     var idealIbm : String = ""
+    var goal : Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,26 +64,26 @@ class CalculatorViewController: UIViewController {
                 txtAge.text = String(total)
             }
             
-        case "agePlus":
-            if (txtAge.text == ""){
-                txtAge.text = "1"
+        case "kilogramsPlus":
+            if (txtKilograms.text == ""){
+                txtKilograms.text = "1"
                 return
             }
             
-            if let aux = Double(txtAge.text!) {
+            if let aux = Double(txtKilograms.text!) {
                 let total = aux + 1
-                txtAge.text = String(total)
+                txtKilograms.text = String(total)
             }
             
-        case "agePlus":
-            if (txtAge.text == ""){
-                txtAge.text = "1"
+        case "goalPlus":
+            if (txtGoal.text == ""){
+                txtGoal.text = "1"
                 return
             }
             
-            if let aux = Double(txtAge.text!) {
+            if let aux = Double(txtGoal.text!) {
                 let total = aux + 1
-                txtAge.text = String(total)
+                txtGoal.text = String(total)
             }
         default:
             return
@@ -108,42 +109,42 @@ class CalculatorViewController: UIViewController {
                 }
             }
             
-        case "cmMinus":
-            if (txtCentimeters.text == ""){
-                txtCentimeters.text = "1"
+        case "kilogramsMinus":
+            if (txtKilograms.text == ""){
+                txtKilograms.text = "1"
                 return
             }
             
-            if let aux = Double(txtCentimeters.text!) {
+            if let aux = Double(txtKilograms.text!) {
                 let total = aux - 1
                 if(total > 0){
-                    txtCentimeters.text = String(total)
+                    txtKilograms.text = String(total)
                 }
             }
             
-        case "cmMinus":
-            if (txtCentimeters.text == ""){
-                txtCentimeters.text = "1"
-                return
-            }
-            
-            if let aux = Double(txtCentimeters.text!) {
-                let total = aux - 1
-                if(total > 0){
-                    txtCentimeters.text = String(total)
-                }
-            }
-            
-        case "agePlus":
+        case "ageMinus":
             if (txtAge.text == ""){
                 txtAge.text = "1"
                 return
             }
             
             if let aux = Double(txtAge.text!) {
-                let total = aux + 1
+                let total = aux - 1
                 if(total > 0){
                     txtAge.text = String(total)
+                }
+            }
+            
+        case "goalMinus":
+            if (txtGoal.text == ""){
+                txtGoal.text = "1"
+                return
+            }
+            
+            if let aux = Double(txtGoal.text!) {
+                let total = aux + 1
+                if(total > 0){
+                    txtGoal.text = String(total)
                 }
             }
         default:
@@ -166,7 +167,7 @@ class CalculatorViewController: UIViewController {
     
     func calculation(){
         
-        var meters : Double = centimeters / 100
+        let meters : Double = centimeters / 100
         result = kilograms /  (meters * meters)
         
         switch result {
