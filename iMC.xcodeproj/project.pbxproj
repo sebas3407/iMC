@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA6420D5224692190029582E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6420D4224692190029582E /* CalculatorViewController.swift */; };
+		AA8CCFDA224FEA9F001EF05C /* girl2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AA8CCFD9224FEA9E001EF05C /* girl2.jpeg */; };
 		AAC553C7224676F800962753 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC553C6224676F800962753 /* AppDelegate.swift */; };
 		AAC553C9224676F800962753 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC553C8224676F800962753 /* ViewController.swift */; };
 		AAC553CC224676F900962753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC553CA224676F900962753 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		AA6420D4224692190029582E /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		AA8CCFD9224FEA9E001EF05C /* girl2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl2.jpeg; sourceTree = "<group>"; };
 		AAC553C3224676F800962753 /* iMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC553C6224676F800962753 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAC553C8224676F800962753 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				AAC553CA224676F900962753 /* Main.storyboard */,
 				AAC553CD224676FB00962753 /* Assets.xcassets */,
 				AAC553CF224676FB00962753 /* LaunchScreen.storyboard */,
+				AA8CCFD9224FEA9E001EF05C /* girl2.jpeg */,
 				AAC553D2224676FB00962753 /* Info.plist */,
 				AA6420D4224692190029582E /* CalculatorViewController.swift */,
 			);
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC553D1224676FB00962753 /* LaunchScreen.storyboard in Resources */,
+				AA8CCFDA224FEA9F001EF05C /* girl2.jpeg in Resources */,
 				AAC553CE224676FB00962753 /* Assets.xcassets in Resources */,
 				AAC553CC224676F900962753 /* Main.storyboard in Resources */,
 			);
