@@ -171,23 +171,81 @@ class CalculatorViewController: UIViewController {
         result = kilograms /  (meters * meters)
         
         switch result {
-        case 0...18.5:
-            ibm = "Peso inferior a lo normal"
+        case 0...15.9:
+            ibm = "Delgadez selvera"
+        case 16.0...16.9:
+            ibm = "Delgadez moderada"
+        case 17.0...18.4:
+            ibm = "Delgadez leve"
         case 18.5...24.9:
-            ibm = "Normal"
-        case  25.0...29.9:
-            ibm = "Peso superior al normal"
-        case 30...100:
-            ibm = "Obesidad"
+            ibm = "Peso normal"
+        case 25.0...29.9:
+            ibm = "Pre-obeso"
+        case 30.0...34.9:
+            ibm = "Obesidad tipo I"
+        case 35.0...39.9:
+            ibm = "Obesidad tipo II"
         default:
-            ibm = "Normal"
+            ibm = "Obesidad tipo III"
         }
-        
-        if(gender == .male){
-            idealIbm = ""
-        }
-        else{
-            idealIbm = ""
+
+        switch age {
+        case 16:
+            idealIbm = "19 - 24"
+            
+        case 17...18:
+            if(gender == .male){
+                idealIbm = "20 - 25"
+            }
+            else{
+                idealIbm = "19 - 24"
+            }
+
+        case 19...24:
+            if(gender == .male){
+                idealIbm = "21 - 26"
+            }
+            else{
+                idealIbm = "19 - 24"
+            }
+            
+        case 25...34:
+            if(gender == .male){
+                idealIbm = "22 - 27"
+            }
+            else{
+                idealIbm = "20 - 25"
+            }
+            
+        case 35...44:
+            if(gender == .male){
+                idealIbm = "23 - 28"
+            }
+            else{
+                idealIbm = "21 - 26"
+            }
+            
+        case 45...54:
+            if(gender == .male){
+                idealIbm = "23 - 28"
+            }
+            else{
+                idealIbm = "22 - 27"
+            }
+            
+        case 55...64:
+            if(gender == .male){
+                idealIbm = "24 - 29"
+            }
+            else{
+                idealIbm = "23 - 28"
+            }
+            
+        case 65...90:
+            idealIbm = "20 - 25"
+            
+        default:
+            idealIbm = "0"
         }
     }
 }
