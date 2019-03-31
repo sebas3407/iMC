@@ -54,6 +54,22 @@
                                     <segue destination="1IH-fp-fW9" kind="show" id="za6-Js-ea5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OvalGray" translatesAutoresizingMaskIntoConstraints="NO" id="ZrC-WV-RiW">
+                                <rect key="frame" x="20" y="723" width="6" height="6"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OvalGray" translatesAutoresizingMaskIntoConstraints="NO" id="8GD-py-Lic">
+                                <rect key="frame" x="29" y="723" width="6" height="6"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OvalGray" translatesAutoresizingMaskIntoConstraints="NO" id="quK-pa-VGb">
+                                <rect key="frame" x="39" y="723" width="6" height="6"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="nn4-oe-uMK">
+                                <rect key="frame" x="330" y="712" width="31" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -267,10 +283,12 @@
     <resources>
         <image name="+_bnt" width="28" height="28"/>
         <image name="-_btn" width="28" height="28"/>
+        <image name="ArrowRight" width="10.5" height="16.5"/>
         <image name="FemaleWhite" width="41.5" height="41.5"/>
         <image name="Girl" width="542" height="810"/>
         <image name="MaleWhite" width="37" height="37"/>
         <image name="Mask" width="144" height="72"/>
+        <image name="OvalGray" width="4" height="4"/>
         <image name="Refresh" width="48" height="48"/>
         <image name="backgrounWhite" width="375" height="812"/>
         <image name="background" width="375" height="812"/>
