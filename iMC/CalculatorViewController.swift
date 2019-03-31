@@ -154,8 +154,8 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func setGender(_ sender: Any) {
         
-        let btn : UIButton = sender as! UIButton
-        let accessibilityLabel = (btn.accessibilityLabel!)
+        let view : UIView = sender as! UIView
+        let accessibilityLabel = (view.accessibilityLabel!)
         
         if(accessibilityLabel == ""){
             gender = .male
