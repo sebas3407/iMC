@@ -14,6 +14,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var txtKilograms: UITextField!
     @IBOutlet weak var txtGoal: UITextField!
     @IBOutlet weak var txtAge: UITextField!
+    @IBOutlet weak var viewMale: UIView!
+    @IBOutlet weak var viewFemale: UIView!
     
     enum Gender {
         case male, female
@@ -30,6 +32,10 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let tap = UITapGestureRecognizer(target: self, action:
+            #selector(setGender(sender:)))
+        viewMale.addGestureRecognizer(tap)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -152,17 +158,9 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    @IBAction func setGender(_ sender: Any) {
+    @objc func setGender(sender: UITapGestureRecognizer) {
         
-        let view : UIView = sender as! UIView
-        let accessibilityLabel = (view.accessibilityLabel!)
-        
-        if(accessibilityLabel == ""){
-            gender = .male
-        }
-        else{
-            gender = .female
-        }
+        gender = .male
     }
     
     func calculation(){
