@@ -33,9 +33,15 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap = UITapGestureRecognizer(target: self, action:
+        let maleTap = UITapGestureRecognizer(target: self, action:
             #selector(setGender(sender:)))
-        viewMale.addGestureRecognizer(tap)
+        maleTap.accessibilityLabel = "viewMale"
+        viewMale.addGestureRecognizer(maleTap)
+        
+        let femaleTap = UITapGestureRecognizer(target: self, action:
+            #selector(setGender(sender:)))
+        femaleTap.accessibilityLabel = "viewFemale"
+        viewFemale.addGestureRecognizer(femaleTap)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -160,7 +166,16 @@ class CalculatorViewController: UIViewController {
     
     @objc func setGender(sender: UITapGestureRecognizer) {
         
-        gender = .male
+        if(sender.accessibilityLabel == "maleView"){
+            gender = .male
+            viewMale.backgroundColor = UIColor.blue
+            viewFemale.backgroundColor = UIColor.red
+        }
+        else{
+            gender = .female
+            viewFemale.backgroundColor = UIColor.red
+            viewMale.backgroundColor = UIColor.white
+        }
     }
     
     func calculation(){
