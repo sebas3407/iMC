@@ -66,10 +66,14 @@
                                 <rect key="frame" x="39" y="723" width="6" height="6"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ArrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="nn4-oe-uMK">
-                                <rect key="frame" x="330" y="712" width="31" height="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-A8-8E4">
+                                <rect key="frame" x="340" y="709" width="10" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" image="ArrowRight"/>
+                                <connections>
+                                    <segue destination="1IH-fp-fW9" kind="show" id="faH-7a-1b8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -150,7 +154,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-4d-6p2">
                                 <rect key="frame" x="343" y="490" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="kilogramsPlus"/>
                                 <state key="normal" image="+_bnt"/>
+                                <connections>
+                                    <action selector="increaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="0au-OA-nTC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-7u-Phk">
                                 <rect key="frame" x="91" y="587" width="26" height="17"/>
@@ -171,7 +179,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcD-YC-Vei">
                                 <rect key="frame" x="343" y="581" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="agePlus"/>
                                 <state key="normal" image="+_bnt"/>
+                                <connections>
+                                    <action selector="increaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="uce-oF-pBC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7X-lN-sg5">
                                 <rect key="frame" x="91" y="681" width="30" height="17"/>
@@ -192,7 +204,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-mG-V34">
                                 <rect key="frame" x="343" y="675" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="goalPlus"/>
                                 <state key="normal" image="+_bnt"/>
+                                <connections>
+                                    <action selector="increaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="E6W-0g-s0Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFr-eh-X0G">
                                 <rect key="frame" x="152" y="780" width="129" height="30"/>
@@ -216,6 +232,7 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.26666666666666666" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="viewMale"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUV-xX-E08">
                                 <rect key="frame" x="225" y="202" width="144" height="144"/>
@@ -272,7 +289,12 @@
                         <viewLayoutGuide key="safeArea" id="Qzb-6b-fCU"/>
                     </view>
                     <connections>
+                        <outlet property="txtAge" destination="nUf-B1-FvI" id="J7O-87-KYZ"/>
                         <outlet property="txtCentimeters" destination="x6z-Oz-rDO" id="8EN-Zz-LkB"/>
+                        <outlet property="txtGoal" destination="3Y3-SO-OHg" id="rqI-cU-qQb"/>
+                        <outlet property="txtKilograms" destination="2yp-ah-2I7" id="Z9T-UW-BUv"/>
+                        <outlet property="viewFemale" destination="uUV-xX-E08" id="h0S-Eh-M4Z"/>
+                        <outlet property="viewMale" destination="iar-lf-F37" id="eg0-BN-oWl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxt-Bl-wzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,4 +315,7 @@
         <image name="backgrounWhite" width="375" height="812"/>
         <image name="background" width="375" height="812"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="faH-7a-1b8"/>
+    </inferredMetricsTieBreakers>
 </document>
