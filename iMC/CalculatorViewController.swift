@@ -71,7 +71,7 @@ class CalculatorViewController: UIViewController {
                 return
             }
             
-            if let aux = Double(txtAge.text!) {
+            if let aux = Int(txtAge.text!) {
                 let total = aux + 1
                 txtAge.text = String(total)
             }
@@ -166,15 +166,18 @@ class CalculatorViewController: UIViewController {
     
     @objc func setGender(sender: UITapGestureRecognizer) {
         
-        if(sender.accessibilityLabel == "maleView"){
+        let activeColor : UIColor = UIColor.init(red: 120/255, green: 143/255, blue: 155/255, alpha: 1)
+        let inactiveColor : UIColor = UIColor.init(red: 55/255, green: 68/255,blue: 78/255, alpha: 1)
+        
+        if(sender.accessibilityLabel == "viewMale"){
             gender = .male
-            viewMale.backgroundColor = UIColor.blue
-            viewFemale.backgroundColor = UIColor.red
+            viewMale.backgroundColor = activeColor
+            viewFemale.backgroundColor = inactiveColor
         }
         else{
             gender = .female
-            viewFemale.backgroundColor = UIColor.red
-            viewMale.backgroundColor = UIColor.white
+            viewFemale.backgroundColor = activeColor
+            viewMale.backgroundColor = inactiveColor
         }
     }
     
