@@ -21,6 +21,14 @@ class CalculatorViewController: UIViewController {
         case male, female
     }
     
+    struct Person {
+        let centimeters: Double
+        let kilograms: Double
+        let age: Int
+        let goal: Double
+        let gender: Gender
+    }
+    
     var centimeters : Double = 0
     var kilograms : Double = 0
     var age : Int = 0
@@ -30,6 +38,16 @@ class CalculatorViewController: UIViewController {
     var idealIbm : String = ""
     var goal : Double = 0
     
+    let viewControllerB = ViewController()
+//    navigationController?.pushViewController(viewControllerB, animated: true)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let user = Person(centimeters: self.centimeters, kilograms: self.kilograms, age: self.age, goal: self.goal, gender: self.gender)
+    
+        let detailViewController = segue.destination as? ViewController
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
