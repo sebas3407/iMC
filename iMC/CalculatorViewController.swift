@@ -16,6 +16,7 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var txtAge: UITextField!
     @IBOutlet weak var viewMale: UIView!
     @IBOutlet weak var viewFemale: UIView!
+    @IBOutlet weak var btnGenerateIBM: UIView!
     
     enum Gender {
         case male, female
