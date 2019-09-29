@@ -121,9 +121,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKr-bo-elg">
                                 <rect key="frame" x="202" y="396" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="cmMinus"/>
                                 <state key="normal" image="-_btn"/>
                                 <connections>
-                                    <action selector="decreaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="jUR-yx-YQB"/>
+                                    <action selector="decreaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="aJU-26-JyJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2O-qE-U2r">
@@ -149,7 +150,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ui5-xd-Jyr">
                                 <rect key="frame" x="202" y="490" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="kilogramsMinus"/>
                                 <state key="normal" image="-_btn"/>
+                                <connections>
+                                    <action selector="decreaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="vnF-LR-bAn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-4d-6p2">
                                 <rect key="frame" x="343" y="490" width="28" height="28"/>
@@ -174,7 +179,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-kY-qbN">
                                 <rect key="frame" x="202" y="581" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="ageMinus"/>
                                 <state key="normal" image="-_btn"/>
+                                <connections>
+                                    <action selector="decreaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="jqF-gY-vo0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcD-YC-Vei">
                                 <rect key="frame" x="343" y="581" width="28" height="28"/>
@@ -199,7 +208,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2P-Th-Dhf">
                                 <rect key="frame" x="202" y="675" width="28" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="goalMinus"/>
                                 <state key="normal" image="-_btn"/>
+                                <connections>
+                                    <action selector="decreaseValue:" destination="1IH-fp-fW9" eventType="touchUpInside" id="ggf-8Q-PzK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-mG-V34">
                                 <rect key="frame" x="343" y="675" width="28" height="28"/>
