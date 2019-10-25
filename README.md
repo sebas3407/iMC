@@ -19,4 +19,4 @@ This app helps you to know your body mass index
 
 ### Credits
 
-- **Sebastian Ortiz Velez** - *Developer* http://sebastianortiz.tk
+- **Sebastian Ortiz Velez** - *Developer*
