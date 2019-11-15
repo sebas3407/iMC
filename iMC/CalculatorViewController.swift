@@ -16,7 +16,6 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var txtAge: UITextField!
     @IBOutlet weak var viewMale: UIView!
     @IBOutlet weak var viewFemale: UIView!
-    @IBOutlet weak var btnGenerateIBM: UIView!
     
     enum Gender {
         case male, female
@@ -30,12 +29,12 @@ class CalculatorViewController: UIViewController {
         let gender: Gender
     }
     
-    var centimeters : Double = 0
-    var kilograms : Double = 0
-    var age : Int = 0
+    var centimeters : Double = 168
+    var kilograms : Double = 53
+    var age : Int = 24
     var gender : Gender = .male
-    var result : Double = 0
-    var ibm : String = ""
+    var ibm : Double = 0
+    var ibmDescription : String = ""
     var idealIbm : String = ""
     var goal : Double = 0
     
@@ -61,6 +60,8 @@ class CalculatorViewController: UIViewController {
             #selector(setGender(sender:)))
         femaleTap.accessibilityLabel = "viewFemale"
         viewFemale.addGestureRecognizer(femaleTap)
+        
+       // centimeters = Double("txtCentimeters.text") as! Double
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -200,30 +201,37 @@ class CalculatorViewController: UIViewController {
         }
     }
     
-    func calculation(){
+    @IBAction func resetControls(_ sender: Any) {
+        txtCentimeters.text = "165"
+        txtKilograms.text = "70"
+        txtAge.text = "18"
+        txtGoal.text = "20"
+    }
+    
+    @IBAction func calculation(_ sender: Any) {
         
         let meters : Double = centimeters / 100
-        result = kilograms /  (meters * meters)
+        ibm = kilograms /  (meters * meters)
         
-        switch result {
+        switch ibm {
         case 0...15.9:
-            ibm = "Delgadez selvera"
+            ibmDescription = "Delgadez selvera"
         case 16.0...16.9:
-            ibm = "Delgadez moderada"
+            ibmDescription = "Delgadez moderada"
         case 17.0...18.4:
-            ibm = "Delgadez leve"
+            ibmDescription = "Delgadez leve"
         case 18.5...24.9:
-            ibm = "Peso normal"
+            ibmDescription = "Peso normal"
         case 25.0...29.9:
-            ibm = "Pre-obeso"
+            ibmDescription = "Pre-obeso"
         case 30.0...34.9:
-            ibm = "Obesidad tipo I"
+            ibmDescription = "Obesidad tipo I"
         case 35.0...39.9:
-            ibm = "Obesidad tipo II"
+            ibmDescription = "Obesidad tipo II"
         default:
-            ibm = "Obesidad tipo III"
+            ibmDescription = "Obesidad tipo III"
         }
-
+        
         switch age {
         case 16:
             idealIbm = "19 - 24"
@@ -235,7 +243,7 @@ class CalculatorViewController: UIViewController {
             else{
                 idealIbm = "19 - 24"
             }
-
+            
         case 19...24:
             if(gender == .male){
                 idealIbm = "21 - 26"
@@ -282,5 +290,7 @@ class CalculatorViewController: UIViewController {
         default:
             idealIbm = "0"
         }
+        
+        print(idealIbm)
     }
 }
